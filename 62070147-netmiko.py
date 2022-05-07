@@ -20,5 +20,6 @@ with ConnectHandler(**device) as ssh:
         ssh.send_config_set(commands_delete)
     else:
         ssh.send_config_set(commands_create)
+    ssh.save_config()
     # print(words[1][-14:])
     # result = ssh.send_config_set(commands)
